@@ -1,0 +1,21 @@
+{{>layouts/header}}
+
+<div class="jumbotron">
+    <h1>Article 등록해요<!doctype html></h1>
+    <hr>
+    <p>articles/new.mustache</p>
+</div>
+
+<form class="container" action="/articles/new" method="post"> <!-- post 방식 : Create 데이터 생성 방식 -->
+    <div class="form-group">
+        <label for="title">제목</label>
+        <input name="title" type="text" class="form-control" id="article-title" placeholder="제목을 입력하세요">
+    </div>
+    <div class="form-group">
+        <label for="content">내용</label>
+        <textarea name="content" class="form-control" id="article-content" placeholder="내용을 입력하세요" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">제출</button>
+</form>
+
+{{>layouts/footer}}
